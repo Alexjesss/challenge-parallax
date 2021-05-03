@@ -1,0 +1,67 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 250vh;
+    overflow: hidden;
+    background-image: url("img/11_background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.content {
+    position: relative;
+}
+
+.layer {
+    position: absolute;
+}
+
+.ground {
+    z-index: 20;
+    background-repeat: no-repeat;
+    top: 478px;
+}
+
+.bigClouds {
+    z-index: 5;
+    top: 780px;
+    transform: scale(1, 1);
+}
+
+.smallClouds {
+    z-index: 4;
+    transform: scale(0.6, 0.6);
+    top: 878px;
+    left: -387px;
+    opacity: 0.8;
+}
+
+.distantClouds {
+    z-index: 4;
+    transform: scale(0.6, 0.6);
+    top: 762px;
+    left: 323px;
+    opacity: 0.5;
+}
+
+.moreDistantClouds {
+    z-index: 4;
+    transform: scale(0.9, 0.8);
+    top: -252px;
+    left: -222px;
+    opacity: 0.4;
+}
+
+.trees {
+    z-index: 10;
+    top: 705px;
+    transform: scale(1, 0.5);
+}
+
+.distantTrees {
+    z-index: 5;
+    top: 787px;
+    transform: scale(1,0.3);
+}
