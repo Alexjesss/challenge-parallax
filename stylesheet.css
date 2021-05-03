@@ -1,13 +1,14 @@
 body {
     padding: 0;
     margin: 0;
-    min-height: 250vh;
     overflow: hidden;
-    background-image: url("img/11_background.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+}
 
+.background{
+    background-size: contain;
+    background-image: url("img/11_background.png");
+    background-repeat: repeat-x;
+    z-index: 1;
 }
 
 .content {
@@ -16,69 +17,102 @@ body {
 
 .layer {
     position: absolute;
+    height: 750px;
 }
 
 .ground {
-    z-index: 20;
-    background-repeat: no-repeat;
-    top: 478px;
+    background-image: url("img/01_ground.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 10;
+    width: 100%;
+    animation: animated 5s linear infinite;
 }
 
 .bigClouds {
+    background-image: url("img/07_huge_clouds.png");
     z-index: 5;
-    top: 780px;
-    transform: scale(1, 1);
+    background-size: contain;
+    width: 100%;
+    background-repeat: repeat-x;
+    animation: animated 10s linear infinite;
 }
 
 .smallClouds {
+    background-repeat: repeat-x;
+    width: 100%;
+    background-size: contain;
     z-index: 4;
-    transform: scale(0.6, 0.6);
-    top: 878px;
-    left: -387px;
     opacity: 0.8;
+    background-image: url("img/08_clouds.png");
 }
 
 .distantClouds {
-    z-index: 4;
-    transform: scale(0.6, 0.6);
-    top: 762px;
-    left: 323px;
-    opacity: 0.5;
+    background-size: contain;
+    width: 100%;
+    z-index: 3;
+    background-repeat: repeat-x;
+    background-image: url("img/09_distant_clouds1.png");
 }
 
 .moreDistantClouds {
-    z-index: 4;
-    transform: scale(0.9, 0.8);
-    top: 937px;
-    left: -337px;
+    background-repeat: repeat-x;
     opacity: 0.4;
+    background-size: contain;
+    width: 100%;
+    z-index: 2;
+    background-image: url("img/10_distant_clouds.png");
 }
 
 .trees {
-    z-index: 10;
-    top: 705px;
-    transform: scale(1, 0.5);
+    background-repeat: repeat-x;
+    width: 100%;
+    background-size: contain;
+    z-index: 9;
+    animation: animated 8.5s linear infinite;
+    background-image: url("img/02_trees and bushes.png");
 }
 
 .distantTrees {
-    z-index: 5;
-    top: 787px;
-    transform: scale(1,0.3);
+    z-index: 8;
+    background-size: contain;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-image: url("img/03_distant_trees.png");
 }
 
-.bushes{
-    background-repeat: no-repeat;
-    top: 639px;
+.bushes {
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: 100%;
+    z-index: 7;
+    animation: animated 8.5s linear infinite;
+    background-image: url("img/04_bushes.png");
 }
 
-.hill{
-    transform: scale(1,0.3);
-    z-index: 5;
-    top: 678px;
+.hill {
+    width: 100%;
+    z-index: 6;
+    background-size: contain;
+    background-repeat: repeat-x;
+    animation: animated 11s linear infinite;
+    background-image: url("img/05_hill1.png");
 }
 
-.hill2{
-    transform: scale(1,0.3);
+.hill2 {
+    background-size: contain;
+    width: 100%;
+    animation: animated 9.5s linear infinite;
     z-index: 5;
-    top: 714px;
+    background-repeat: repeat-x;
+    background-image: url("img/06_hill2.png");
+}
+
+@keyframes animated {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: 1000px;
+    }
 }
