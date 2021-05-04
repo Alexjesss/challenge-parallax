@@ -4,6 +4,8 @@ const pixelSubstraction = 10;
 character.style.position = 'relative';
 character.style.left = '350px';
 character.style.top = '385px';
+let gravity = 1;
+
 
 function keyControls(e) {
     let keys = e.key
@@ -30,7 +32,18 @@ function moveRight() {
 }
 
 function jump() {
-    character.style.top = parseInt(character.style.left) + pixelSubstraction + 'px';
+    let goUp = setInterval(function (){
+        if (character.style.top > 25){
+            clearInterval(goUp);
+            let goDown = setInterval(function(){
+                if (character.style.top < 0){
+                    clearInterval(goDown);}
+                character.style.top = parseInt(character.style.top) - pixelSubstraction + 'px';
+            },20)
+        }
+        character.style.top += gravity;
+        character.style.top = parseInt(character.style.top) - pixelSubstraction + 'px';
+    }, 20)
 }
 
 
