@@ -106,11 +106,50 @@ body {
     background-image: url("img/06_hill2.png");
 }
 
+.character {
+    height: 307px;
+    width: 181px;
+    position: absolute;
+    margin-left: 457px;
+    top: 385px;
+    overflow: hidden;
+    z-index: 11;
+    left: 350px;
+    transform: scale(0.5,0.3);
+}
+
+.sans {
+    position: absolute;
+    background: url("img/sans-left.png") no-repeat no-repeat;
+    height: 305px;
+    width: 729px;
+    /*animation: walking 1s steps(4) infinite;*/
+}
+
+@keyframes walking {
+    from {
+        transform: translate3d(0%, 0%, 0)
+    }
+    to {
+        transform: translate3d(-100%, 0%, 0)
+    }
+}
+
+
 @keyframes animated {
     from {
         background-position-x: 0;
     }
     to {
         background-position-x: 1000px;
+    }
+}
+
+@keyframes move {
+    from {
+        margin-left: 120%;
+    }
+    to {
+        margin-left: -120%;
     }
 }
